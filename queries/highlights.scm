@@ -37,6 +37,8 @@
 
 (string_escape_sequence) @string.escape
 
+(lexer_char_set) @string.regexp
+
 (literal_int) @number
 
 (token_ref) @constant
