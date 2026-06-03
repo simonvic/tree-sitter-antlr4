@@ -11,7 +11,7 @@ export default grammar({
   name: "antlr4",
 
   extras: $ => [
-    /\s/, // whitespaces do matters, but whatever
+    /\s/,
     $.comment_line,
     $.comment_block,
   ],
