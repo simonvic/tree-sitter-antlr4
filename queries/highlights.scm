@@ -89,3 +89,20 @@
   "@" @keyword.directive
   (action_scope_name) @keyword.directive
   (identifier) @keyword.directive)
+
+[
+  "<"
+  ">"
+] @attribute
+
+(option
+  name: (identifier
+    _ @property))
+
+(element_option
+  name: (identifier
+    _ @property))
+
+(predicate_option
+  name: (identifier
+    _ @property))
