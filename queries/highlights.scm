@@ -55,8 +55,8 @@
 
 [
   "="
-  "@"
   "->"
+  "::"
 ] @punctuation
 
 [
@@ -84,3 +84,8 @@
 (lexer_command_name
   (identifier
     (_) @function))
+
+(action
+  "@" @keyword.directive
+  (action_scope_name) @keyword.directive
+  (identifier) @keyword.directive)
