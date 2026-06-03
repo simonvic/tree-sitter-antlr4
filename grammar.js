@@ -281,7 +281,7 @@ export default grammar({
     literal_string: $ => seq(
       '\'',
       repeat(choice(
-        /[^'\\]/,
+        token(prec(1, /[^'\\]/)),
         $.string_escape_sequence,
       )),
       '\'',
@@ -290,7 +290,7 @@ export default grammar({
     literal_string_double: $ => seq(
       '"',
       repeat(choice(
-        /[^"\r\n\\]/,
+        token(prec(1, /[^"\r\n\\]/)),
         $.string_escape_sequence,
       )),
       '"',
@@ -299,7 +299,7 @@ export default grammar({
     literal_string_backtick: $ => seq(
       '`',
       repeat(choice(
-        /[^`\r\n\\]/,
+        token(prec(1, /[^`\r\n\\]/)),
         $.string_escape_sequence,
       )),
       '`',
@@ -308,7 +308,7 @@ export default grammar({
     literal_string_triple: $ => seq(
       '"""',
       repeat(choice(
-        /[^\\]/,
+        token(prec(1, /[^\\]/)),
         $.string_escape_sequence,
       )),
       '"""',
