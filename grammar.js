@@ -12,8 +12,8 @@ export default grammar({
 
   extras: $ => [
     /\s/, // whitespaces do matters, but whatever
-    // $.comment_line,
-    // $.comment_block,
+    $.comment_line,
+    $.comment_block,
   ],
 
   conflicts: $ => [
@@ -329,6 +329,14 @@ export default grammar({
 
     lexer_char_set: _ => token(/\[\]/), // TODO: complete
 
+    comment_line: _ => token(prec(0, seq('//', /[^\n]*/))),
+
+    // kindly borrowed from https://github.com/tree-sitter/tree-sitter-java/blob/master/grammar.js#L1291C5-L1297C8
+    comment_block: _ => token(prec(0, seq(
+      '/*',
+      /[^*]*\*+([^/*][^*]*\*+)*/,
+      '/',
+    ))),
 
   }
 
