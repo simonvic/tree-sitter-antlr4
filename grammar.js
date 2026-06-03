@@ -236,7 +236,7 @@ export default grammar({
       $.rule_ref,
       $.not_set,
       $.wildcard,
-      $.eof,
+      'EOF',
     ),
 
     wildcard: $ => seq('.', optional($.element_options)),
