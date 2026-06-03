@@ -73,4 +73,12 @@
 (labeled_alt
   "#" @attribute
   (identifier
-    (rule_ref) @attribute))
+    (_) @attribute))
+
+(labeled_element
+  (identifier
+    (_) @attribute))
+
+(lexer_command_name
+  (identifier
+    (_) @function))
