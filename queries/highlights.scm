@@ -105,6 +105,12 @@
   ">"
 ] @attribute
 
+(action_block
+  [
+    "{"
+    "}"
+  ] @keyword.directive)
+
 (option
   name: (identifier
     _ @property))
