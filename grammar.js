@@ -321,7 +321,14 @@ export default grammar({
 
     arg_action_block: _ => token(/\[.*\]/),
 
-    lexer_char_set: _ => token(/\[.+\]/), // TODO: do this properly
+    lexer_char_set: $ => seq(
+      '[',
+      repeat(choice(
+        token(/[^\]\\]/),
+        $.escape_sequence
+      )),
+      ']',
+    ),
 
     comment_line: _ => token(prec(0, seq('//', /[^\n]*/))),
 
