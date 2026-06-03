@@ -44,6 +44,20 @@
 (rule_ref) @variable
 
 [
+  "|"
+  "+"
+  "*"
+  "?"
+  "~"
+] @operator
+
+[
+  "="
+  "@"
+  "->"
+] @punctuation
+
+[
   "{"
   "}"
   "("
