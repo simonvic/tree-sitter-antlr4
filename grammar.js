@@ -55,7 +55,7 @@ export default grammar({
     option_value: $ => choice(
       seq($.identifier, repeat(seq('.', $.identifier))),
       $.literal_string,
-      $._action,
+      $.action_block,
       $.literal_int,
     ),
 
@@ -86,21 +86,14 @@ export default grammar({
       '@',
       optional(seq($.action_scope_name, '::')),
       $.identifier,
-      $._action,
+      $.action_block,
     ),
 
     action_scope_name: $ => choice($.identifier, 'lexer', 'parser'),
 
-    _action: $ => seq(
+    action_block: $ => seq(
       '{',
-      repeat(choice(
-        $._action,
-        $.literal_string,
-        $.literal_string_double,
-        $.literal_string_triple,
-        $.literal_string_backtick,
-        $.escape_sequence,
-      )),
+      /[^}]*?/, // TODO: do this properly
       '}',
     ),
 
@@ -127,9 +120,9 @@ export default grammar({
 
     exception_group: $ => seq(repeat1($.exception_handler), optional($.finally_clause)),
 
-    exception_handler: $ => seq('catch', $.arg_action_block, $._action),
+    exception_handler: $ => seq('catch', $.arg_action_block, $.action_block),
 
-    finally_clause: $ => seq('finally', $._action),
+    finally_clause: $ => seq('finally', $.action_block),
 
     rule_prequel: $ => choice($.options_spec, $.rule_action),
 
@@ -139,7 +132,7 @@ export default grammar({
 
     locals_spec: $ => seq('locals', $.arg_action_block),
 
-    rule_action: $ => seq('@', $.identifier, $._action),
+    rule_action: $ => seq('@', $.identifier, $.action_block),
 
     rule_modifiers: $ => repeat1($.rule_modifier),
 
@@ -178,7 +171,7 @@ export default grammar({
 
     lexer_element: $ => choice(
       seq(choice($.lexer_atom, $.lexer_block), optional($.ebnf_suffix)),
-      seq($._action, optional('?')),
+      seq($.action_block, optional('?')),
     ),
 
     lexer_block: $ => seq('(', $.lexer_alt_list, ')'),
@@ -201,14 +194,14 @@ export default grammar({
     element: $ => choice(
       seq(choice($.labeled_element, $.atom), optional($.ebnf_suffix)), // TODO: check this
       $.ebnf,
-      seq($._action, optional('?'), optional($.predicate_options)),
+      seq($.action_block, optional('?'), optional($.predicate_options)),
     ),
 
     predicate_options: $ => seq('<', $.predicate_option, repeat(seq(',', $.predicate_option)), '>'),
 
     predicate_option: $ => choice(
       $.element_option,
-      seq($.identifier, '=', choice($._action, $.literal_int, $.literal_string)),
+      seq($.identifier, '=', choice($.action_block, $.literal_int, $.literal_string)),
     ),
 
     labeled_element: $ => seq($.identifier, choice('=', '+='), choice($.atom, $.block)),
