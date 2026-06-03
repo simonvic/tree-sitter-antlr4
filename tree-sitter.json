@@ -7,7 +7,8 @@
       "title": "Antlr4",
       "scope": "source.antlr4",
       "file-types": [
-        "antlr4"
+        "antlr4",
+        "g4"
       ],
       "injection-regex": "^antlr4$",
       "class-name": "TreeSitterAntlr4"
