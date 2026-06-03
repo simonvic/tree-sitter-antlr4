@@ -1,0 +1,1552 @@
+[
+  {
+    "type": "action",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "action_scope_name",
+          "named": true
+        },
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "action_scope_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alt_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "alternative",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alternative",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "element",
+          "named": true
+        },
+        {
+          "type": "element_options",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "atom",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "not_set",
+          "named": true
+        },
+        {
+          "type": "rule_ref",
+          "named": true
+        },
+        {
+          "type": "terminal_def",
+          "named": true
+        },
+        {
+          "type": "wildcard",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "alt_list",
+          "named": true
+        },
+        {
+          "type": "options_spec",
+          "named": true
+        },
+        {
+          "type": "rule_action",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block_set",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "set_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "channels_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifiers_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "character_range",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "literal_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "delegate_grammar",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "delegate_grammars",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "delegate_grammar",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ebnf",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "ebnf_suffix",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ebnf_suffix",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "ebnf",
+          "named": true
+        },
+        {
+          "type": "ebnf_suffix",
+          "named": true
+        },
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "labeled_element",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        },
+        {
+          "type": "predicate_options",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "element_option",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "literal_int",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "qualified_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "element_options",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "element_option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exception_group",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "exception_handler",
+          "named": true
+        },
+        {
+          "type": "finally_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exception_handler",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arg_action_block",
+          "named": true
+        },
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "finally_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "grammar_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "grammar_type",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "grammar_spec",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "grammar_decl",
+          "named": true
+        },
+        {
+          "type": "mode_spec",
+          "named": true
+        },
+        {
+          "type": "prequel_construct",
+          "named": true
+        },
+        {
+          "type": "rule_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "grammar_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "rule_ref",
+          "named": true
+        },
+        {
+          "type": "token_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identifiers_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "labeled_alt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "alternative",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "labeled_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_alt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_commands",
+          "named": true
+        },
+        {
+          "type": "lexer_elements",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_alt_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_alt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_atom",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "character_range",
+          "named": true
+        },
+        {
+          "type": "lexer_char_set",
+          "named": true
+        },
+        {
+          "type": "not_set",
+          "named": true
+        },
+        {
+          "type": "terminal_def",
+          "named": true
+        },
+        {
+          "type": "wildcard",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_alt_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_command",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_command_expr",
+          "named": true
+        },
+        {
+          "type": "lexer_command_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_command_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "literal_int",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_command_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_commands",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ebnf_suffix",
+          "named": true
+        },
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "lexer_atom",
+          "named": true
+        },
+        {
+          "type": "lexer_block",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_elements",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lexer_rule_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_alt_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "literal_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "string_escape_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "literal_string_backtick",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "string_escape_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "literal_string_double",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "string_escape_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "literal_string_triple",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "string_escape_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "locals_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "arg_action_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mode_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "rule_spec_lexer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "not_set",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block_set",
+          "named": true
+        },
+        {
+          "type": "set_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "option",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "option_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "option_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "literal_int",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "options_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "predicate_option",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "element_option",
+          "named": true
+        },
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "literal_int",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "predicate_options",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "predicate_option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "prequel_construct",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "action",
+          "named": true
+        },
+        {
+          "type": "channels_spec",
+          "named": true
+        },
+        {
+          "type": "delegate_grammars",
+          "named": true
+        },
+        {
+          "type": "options_spec",
+          "named": true
+        },
+        {
+          "type": "tokens_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "qualified_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_action",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "literal_string_backtick",
+          "named": true
+        },
+        {
+          "type": "literal_string_double",
+          "named": true
+        },
+        {
+          "type": "literal_string_triple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_alt_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "labeled_alt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "rule_alt_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_modifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "rule_prequel",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "options_spec",
+          "named": true
+        },
+        {
+          "type": "rule_action",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_returns",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "arg_action_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "rule_spec_lexer",
+          "named": true
+        },
+        {
+          "type": "rule_spec_parser",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_spec_lexer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "lexer_rule_block",
+          "named": true
+        },
+        {
+          "type": "options_spec",
+          "named": true
+        },
+        {
+          "type": "token_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rule_spec_parser",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arg_action_block",
+          "named": true
+        },
+        {
+          "type": "exception_group",
+          "named": true
+        },
+        {
+          "type": "locals_spec",
+          "named": true
+        },
+        {
+          "type": "rule_block",
+          "named": true
+        },
+        {
+          "type": "rule_modifier",
+          "named": true
+        },
+        {
+          "type": "rule_prequel",
+          "named": true
+        },
+        {
+          "type": "rule_ref",
+          "named": true
+        },
+        {
+          "type": "rule_returns",
+          "named": true
+        },
+        {
+          "type": "throws_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "character_range",
+          "named": true
+        },
+        {
+          "type": "element_options",
+          "named": true
+        },
+        {
+          "type": "lexer_char_set",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "token_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "terminal_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "element_options",
+          "named": true
+        },
+        {
+          "type": "literal_string",
+          "named": true
+        },
+        {
+          "type": "token_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "throws_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "qualified_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tokens_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifiers_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "wildcard",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "element_options",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "\"\"\"",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "..",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "::",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "`",
+    "named": false
+  },
+  {
+    "type": "arg_action_block",
+    "named": true
+  },
+  {
+    "type": "catch",
+    "named": false
+  },
+  {
+    "type": "channels",
+    "named": false
+  },
+  {
+    "type": "escape_sequence",
+    "named": true
+  },
+  {
+    "type": "finally",
+    "named": false
+  },
+  {
+    "type": "fragment",
+    "named": false
+  },
+  {
+    "type": "grammar",
+    "named": false
+  },
+  {
+    "type": "import",
+    "named": false
+  },
+  {
+    "type": "lexer",
+    "named": false
+  },
+  {
+    "type": "lexer_char_set",
+    "named": true
+  },
+  {
+    "type": "literal_int",
+    "named": true
+  },
+  {
+    "type": "locals",
+    "named": false
+  },
+  {
+    "type": "mode",
+    "named": false
+  },
+  {
+    "type": "options",
+    "named": false
+  },
+  {
+    "type": "parser",
+    "named": false
+  },
+  {
+    "type": "paser",
+    "named": false
+  },
+  {
+    "type": "private",
+    "named": false
+  },
+  {
+    "type": "protected",
+    "named": false
+  },
+  {
+    "type": "public",
+    "named": false
+  },
+  {
+    "type": "returns",
+    "named": false
+  },
+  {
+    "type": "rule_ref",
+    "named": true
+  },
+  {
+    "type": "string_escape_sequence",
+    "named": true
+  },
+  {
+    "type": "throws",
+    "named": false
+  },
+  {
+    "type": "token_ref",
+    "named": true
+  },
+  {
+    "type": "tokens",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  }
+]
