@@ -89,7 +89,7 @@ export default grammar({
       $._action,
     ),
 
-    action_scope_name: $ => choice($.identifier, 'lexer', 'paser'),
+    action_scope_name: $ => choice($.identifier, 'lexer', 'parser'),
 
     _action: $ => seq(
       '{',
