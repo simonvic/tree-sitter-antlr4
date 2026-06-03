@@ -236,6 +236,7 @@ export default grammar({
       $.rule_ref,
       $.not_set,
       $.wildcard,
+      $.eof,
     ),
 
     wildcard: $ => seq('.', optional($.element_options)),
@@ -314,7 +315,7 @@ export default grammar({
     ),
 
     string_escape_sequence: _ => token.immediate(choice(
-      seq('\\', /\\[nrtbf"'\\>]/),
+      /\\[nrtbf"'\\>]/,
       seq('\\u', /[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]/),
     )),
 
