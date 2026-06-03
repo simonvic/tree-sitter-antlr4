@@ -321,8 +321,8 @@ export default grammar({
 
     literal_int: _ => token(/[0-9]+/),
 
-    rule_ref: _ => token(/[A-Z][A-Za-z0-9_]*/),
-    token_ref: _ => token(/[a-z][A-Za-z0-9_]*/),
+    token_ref: _ => token(/[A-Z][A-Za-z0-9_]*/),
+    rule_ref: _ => token(/[a-z][A-Za-z0-9_]*/),
 
     escape_sequence: _ => token(/\\./),
 
