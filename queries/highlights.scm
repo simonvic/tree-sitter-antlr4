@@ -8,20 +8,28 @@
   "parser"
   "grammar"
   "options"
-  "import"
   "tokens"
   "channels"
   "mode"
-  "catch"
-  "finally"
-  "returns"
-  "throws"
   "locals"
+] @keyword
+
+"import" @keyword.import
+
+"returns" @keyword.return
+
+[
   "public"
   "private"
   "protected"
   "fragment"
-] @keyword
+] @keyword.modifier
+
+[
+  "catch"
+  "finally"
+  "throws"
+] @keyword.exception
 
 "EOF" @constant.builtin
 
