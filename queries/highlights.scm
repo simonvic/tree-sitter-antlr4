@@ -52,6 +52,7 @@
   "*"
   "?"
   "~"
+  ".."
 ] @operator
 
 [
@@ -71,7 +72,11 @@
   ";"
   ":"
   ","
+  "."
 ] @punctuation.delimiter
+
+(wildcard
+  "." @operator)
 
 (labeled_alt
   "#" @attribute
