@@ -48,13 +48,13 @@
   "}"
   "("
   ")"
-] @puntuation.braket
+] @punctuation.braket
 
 [
   ";"
   ":"
   ","
-] @puntuation.delimiter
+] @punctuation.delimiter
 
 (labeled_alt
   "#" @attribute
