@@ -50,13 +50,17 @@ export default grammar({
 
     options_spec: $ => seq('options', '{', repeat(seq($.option, ';')), '}'),
 
-    option: $ => seq($.identifier, '=', $.option_value),
+    option: $ => seq(
+      field("name", $.identifier),
+      '=',
+      field("value", $.option_value)
+    ),
 
     option_value: $ => choice(
-      seq($.identifier, repeat(seq('.', $.identifier))),
+      $.qualified_identifier,
       $.literal_string,
-      $.action_block,
       $.literal_int,
+      $.action_block,
     ),
 
     ////////////////////////////////////////////////////////////////////////////
@@ -201,7 +205,15 @@ export default grammar({
 
     predicate_option: $ => choice(
       $.element_option,
-      seq($.identifier, '=', choice($.action_block, $.literal_int, $.literal_string)),
+      seq(
+        field("name", $.identifier),
+        '=',
+        field("value", choice(
+          $.literal_int,
+          $.literal_string,
+          $.action_block
+        )),
+      ),
     ),
 
     labeled_element: $ => seq($.identifier, choice('=', '+='), choice($.atom, $.block)),
@@ -259,7 +271,15 @@ export default grammar({
 
     element_option: $ => choice(
       $.qualified_identifier,
-      seq($.identifier, '=', choice($.qualified_identifier, $.literal_string, $.literal_int))
+      seq(
+        field("name", $.identifier),
+        '=',
+        field("value", choice(
+          $.qualified_identifier,
+          $.literal_string,
+          $.literal_int
+        )),
+      ),
     ),
 
     ////////////////////////////////////////////////////////////////////////////
