@@ -55,3 +55,8 @@
   ":"
   ","
 ] @puntuation.delimiter
+
+(labeled_alt
+  "#" @attribute
+  (identifier
+    (rule_ref) @attribute))
