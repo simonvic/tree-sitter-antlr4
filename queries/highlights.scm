@@ -31,4 +31,6 @@
 
 (literal_int) @number
 
-(terminal_def) @constant
+(token_ref) @constant
+
+(rule_ref) @variable
