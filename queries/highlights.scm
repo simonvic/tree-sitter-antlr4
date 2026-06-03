@@ -42,3 +42,16 @@
 (token_ref) @constant
 
 (rule_ref) @variable
+
+[
+  "{"
+  "}"
+  "("
+  ")"
+] @puntuation.braket
+
+[
+  ";"
+  ":"
+  ","
+] @puntuation.delimiter
