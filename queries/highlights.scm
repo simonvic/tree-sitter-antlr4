@@ -10,9 +10,10 @@
   "options"
   "tokens"
   "channels"
-  "mode"
   "locals"
 ] @keyword
+
+"mode" @keyword.directive
 
 "import" @keyword.import
 
@@ -84,6 +85,10 @@
 (lexer_command_name
   (identifier
     (_) @function))
+
+(mode_spec
+  (identifier
+    (_) @keyword.directive.define))
 
 (action
   "@" @keyword.directive
